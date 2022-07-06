@@ -19,11 +19,11 @@ const Header = () => {
           <Logo />
         </Side>
         <Nav>
-          <NavLink href="/sale">Sale</NavLink>
-          <NavLink href="/new">New&nbsp;Releases</NavLink>
-          <NavLink href="/men">Men</NavLink>
-          <NavLink href="/women">Women</NavLink>
-          <NavLink href="/kids">Kids</NavLink>
+          <NavLink href="/sale">A vendre</NavLink>
+          <NavLink href="/new">Nouvelles versions</NavLink>
+          <NavLink href="/men">Hommes</NavLink>
+          <NavLink href="/women">Femmes</NavLink>
+          <NavLink href="/kids">Les enfants</NavLink>
           <NavLink href="/collections">Collections</NavLink>
         </Nav>
         <Side />
@@ -54,6 +54,7 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow-x: auto;
 
   @media ${({ theme }) => theme.queries.phoneAndDown} {
     padding: 18px;
@@ -62,7 +63,7 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(1rem, 7vw - 3.25rem, 3rem);
   margin: 0px 48px;
 
   @media ${({ theme }) => theme.queries.tabletAndDown} {
@@ -91,6 +92,7 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
   color: ${COLORS.gray[900]};
   font-weight: ${WEIGHTS.medium};
 
