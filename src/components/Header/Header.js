@@ -58,6 +58,10 @@ const MainHeader = styled.div`
   @media ${({ theme }) => theme.queries.phoneAndDown} {
     padding: 18px;
   }
+
+  @media ${({ theme }) => theme.queries.tabletAndDown} {
+    align-items: center;
+  }
 `
 
 const Nav = styled.nav`
