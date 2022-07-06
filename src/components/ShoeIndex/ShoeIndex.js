@@ -61,7 +61,7 @@ const LeftColumn = styled.div`
   flex-basis: 248px;
 
   @media ${({ theme }) => theme.queries.tabletAndDown} {
-    flex-basis: fit-content;
+    flex-basis: revert;
     margin-bottom: -12px;
   }
 `
