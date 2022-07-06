@@ -39,7 +39,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
 }
 
 const Overlay = styled(DialogOverlay)`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -61,8 +61,9 @@ const Content = styled(DialogContent)`
 
 const DismissButton = styled(UnstyledButton)`
   position: absolute;
-  top: 26px;
-  right: 16px;
+  top: 10px;
+  right: 0;
+  padding: 16px;
 `
 
 const Nav = styled.nav`
