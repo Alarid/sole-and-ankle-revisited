@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components/macro"
 
-import { COLORS, WEIGHTS } from "../../constants"
 import Logo from "../Logo"
 import SuperHeader from "../SuperHeader"
 import MobileMenu from "../MobileMenu"
@@ -53,7 +52,7 @@ const MainHeader = styled.div`
   align-items: baseline;
   padding: 18px 32px;
   height: 72px;
-  border-bottom: 1px solid ${COLORS.gray[300]};
+  border-bottom: 1px solid var(--color-gray-300);
   overflow-x: auto;
 
   @media ${({ theme }) => theme.queries.phoneAndDown} {
@@ -93,11 +92,11 @@ const NavLink = styled.a`
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  color: ${COLORS.gray[900]};
-  font-weight: ${WEIGHTS.medium};
+  color: var(--color-gray-900);
+  font-weight: var(--weight-medium);
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `
 
